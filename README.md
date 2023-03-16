@@ -2,9 +2,14 @@
 
 Para poder ejecutar el proyecto correctamente siga las siguientes instrucciones:
 
-## Comandos a ejecutar
+## Versión de .Net Core 7
 
-En el directorio del proyecto empezar ejecutando
+Instalar la versión del SDK .Net Core 7, disponible en el sitio de microsoft:
+[https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-7.0.104-windows-x64-installer](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-7.0.104-windows-x64-installer)
+
+
+## Comandos a ejecutar
+Una vez instalada la versión de .Net Core podemos ejecutar en el directorio del proyecto lo siguiente:
 
 ### `dotnet restore`
 
