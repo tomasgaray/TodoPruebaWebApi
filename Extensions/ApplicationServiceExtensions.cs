@@ -24,7 +24,7 @@ namespace TodoPruebaWebApi.Extensions
 
         public static void ConfigureServices(this IServiceCollection services, IConfiguration configuration)
         {
-            string connectionString = configuration.GetConnectionString("sqliteConnection");
+            string? connectionString = configuration.GetConnectionString("sqliteConnection");
             services.AddDbContext<TodoTaskDbContext>(options =>
                 options.UseSqlite(connectionString, b => b.MigrationsAssembly("TodoPruebaWebApi")));
         }

@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using TodoPruebaWebApi.Feature.Entities;
+using TodoPruebaWebApi.Feature.TodoTasks.Entities;
 
 namespace TodoPruebaWebApi.Infraestructure{
     public class TodoTaskDbContext : DbContext

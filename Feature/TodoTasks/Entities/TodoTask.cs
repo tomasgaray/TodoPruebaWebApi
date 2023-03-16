@@ -1,13 +1,30 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace TodoPruebaWebApi.Feature.Entities{
+namespace TodoPruebaWebApi.Feature.TodoTasks.Entities{
     public class TodoTask{
         public int TaskId { get; set; }
         public string Title { get; set; }
-        public string Description { get; set; }
+        public string? Description { get; set; }
         public DateTime CreatedDate { get; set; }
         public bool Completed { get; set; }
+
+        public TodoTask()
+        {
+            Title = "";
+        }
+        public TodoTask(TodoTask? Task)
+        {
+            this.TaskId = Task?.TaskId??0;
+            this.Title = Task?.Title??string.Empty;
+            this.Description = Task?.Description??string.Empty;
+            this.CreatedDate = Task?.CreatedDate??DateTime.Now;
+            this.Completed = Task?.Completed??false;
+        }
+        public void Valid(){
+            if(string.IsNullOrEmpty(Title)) throw new Exception("Por favor ingrese el título");
+        }
+
         
          public class Map
         {
